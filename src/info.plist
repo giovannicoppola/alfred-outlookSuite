@@ -1294,7 +1294,7 @@ end run</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>/Users/giovanni.coppola/OneDrive - Regeneron Pharmaceuticals, Inc/MyScripts/FocusFolder.scpt</string>
+				<string>~/MyScripts/FocusFolder.scpt</string>
 				<key>type</key>
 				<integer>6</integer>
 			</dict>
