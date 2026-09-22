@@ -2,3 +2,11 @@
 *.pyc
 __pycache__
 prefs.plist
+src/config.json
+src/token_cache.json
+# Personal working brief for Claude Code — kept local, not published.
+CLAUDE.md
+# NOTE: .alfredworkflow bundles in releases/ are distributed by linking to them
+# (a GitHub Release would be auto-published to the Alfred Gallery). Only commit
+# CLEAN bundles built via scripts/build_bundle.sh — Alfred's own "Export Workflow"
+# sweeps in the gitignored config.json/token_cache.json and would leak secrets.

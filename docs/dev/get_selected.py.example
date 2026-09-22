@@ -1,0 +1,250 @@
+#!/usr/bin/env python3
+"""Get the currently selected email in Outlook via accessibility API + Graph API.
+
+Uses two sources from the Outlook UI:
+  1. Message list row (selected) → subject, sender name, time
+  2. Reading pane header → exact sender email, subject
+
+These are combined to query the Graph API and find the exact message.
+"""
+
+import json
+import re
+import subprocess
+import sys
+from datetime import datetime, timedelta, timezone
+
+import requests
+from auth import get_token, GRAPH_ENDPOINT
+
+# JXA script: get description from the selected row in the message list,
+# AND the reading pane header (sender email, subject, time)
+JXA_GET_SELECTED = """
+var se = Application("System Events");
+var outlook = se.processes["Microsoft Outlook"];
+var win = outlook.windows[0];
+var splitGroup = win.splitterGroups[0];
+var inner = splitGroup.uiElements[7];
+var msgPane = inner.uiElements[2];
+
+// 1. Message list: get selected row description
+var msgList = msgPane.uiElements[0];
+var scrollArea = msgList.uiElements[1];
+var table = scrollArea.uiElements[0];
+var rows = table.rows();
+var listDesc = "";
+for (var i = 0; i < rows.length; i++) {
+    if (rows[i].selected()) {
+        listDesc = rows[i].uiElements[0].description();
+        break;
+    }
+}
+
+// 2. Reading pane header: get subject, sender email, timestamp
+var readPane = msgPane.uiElements[2];
+var subject = "";
+var senderEmail = "";
+var timestamp = "";
+try {
+    subject = readPane.uiElements[0].value();
+} catch(e) {}
+
+var headerArea = readPane.uiElements[6]; // "Message Header Details"
+var headerElems = headerArea.uiElements();
+for (var i = 0; i < headerElems.length; i++) {
+    try {
+        var desc = headerElems[i].description();
+        if (desc === "messageHeaderFromContent") {
+            // Value like "From: John Smith, john.smith@example.com, Available"
+            var val = headerElems[i].value();
+            var emailMatch = val.match(/[\\w.+-]+@[\\w.-]+/);
+            if (emailMatch) senderEmail = emailMatch[0];
+        }
+        // Timestamp element has no specific description
+        var val2 = headerElems[i].value();
+        if (val2 && (val2.indexOf("at ") !== -1 || val2.match(/\\d{1,2}:\\d{2}/))) {
+            timestamp = val2;
+        }
+    } catch(e) {}
+}
+
+JSON.stringify({listDesc: listDesc, subject: subject, senderEmail: senderEmail, timestamp: timestamp});
+"""
+
+
+def get_selected_info():
+    """Use JXA to read info about the selected email from Outlook's UI."""
+    result = subprocess.run(
+        ["osascript", "-l", "JavaScript", "-e", JXA_GET_SELECTED],
+        capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        print(f"JXA error: {result.stderr.strip()}", file=sys.stderr)
+        return None
+    try:
+        return json.loads(result.stdout.strip())
+    except json.JSONDecodeError:
+        print(f"Could not parse JXA output: {result.stdout[:200]}", file=sys.stderr)
+        return None
+
+
+def parse_ui_timestamp(ts_str):
+    """Parse Outlook UI timestamps like 'Today at 2:47 PM', 'Yesterday at 10:30 AM',
+    'Mon 3/9/2026 at 10:30 AM', '3/9/2026 at 10:30 AM' into a UTC datetime."""
+    if not ts_str:
+        return None
+
+    # Extract the time portion (e.g., "2:47 PM")
+    time_match = re.search(r"(\d{1,2}:\d{2}\s*[AP]M)", ts_str)
+    if not time_match:
+        return None
+    time_str = time_match.group(1)
+
+    # Determine the date portion
+    now = datetime.now()
+    ts_lower = ts_str.lower()
+    if "today" in ts_lower:
+        date_part = now.date()
+    elif "yesterday" in ts_lower:
+        date_part = (now - timedelta(days=1)).date()
+    else:
+        # Try to parse a date like "3/9/2026" or "Mon 3/9/2026"
+        date_match = re.search(r"(\d{1,2}/\d{1,2}/\d{4})", ts_str)
+        if date_match:
+            date_part = datetime.strptime(date_match.group(1), "%m/%d/%Y").date()
+        else:
+            return None
+
+    # Combine date + time in local time
+    time_part = datetime.strptime(time_str.strip(), "%I:%M %p").time()
+    local_dt = datetime.combine(date_part, time_part)
+    return local_dt
+
+
+def pick_best_match(messages, ui_timestamp_str):
+    """From a list of candidate messages, pick the one closest to the UI timestamp."""
+    if not messages:
+        return None
+    if len(messages) == 1:
+        return messages[0]
+
+    ui_dt = parse_ui_timestamp(ui_timestamp_str)
+    if not ui_dt:
+        # Can't parse timestamp, return the most recent
+        return messages[0]
+
+    best = None
+    best_diff = None
+    for msg in messages:
+        received = msg.get("receivedDateTime", "")
+        try:
+            # Graph returns UTC times like "2026-03-10T18:47:08Z"
+            msg_utc = datetime.fromisoformat(received.replace("Z", "+00:00"))
+            # Convert to local naive for comparison (UI shows local time)
+            msg_local = msg_utc.astimezone().replace(tzinfo=None)
+            diff = abs((msg_local - ui_dt).total_seconds())
+            if best_diff is None or diff < best_diff:
+                best_diff = diff
+                best = msg
+        except (ValueError, TypeError):
+            continue
+
+    return best or messages[0]
+
+
+def find_message(token, subject, sender_email, ui_timestamp_str):
+    """Find the exact message via Graph API using subject + sender + timestamp."""
+    headers = {"Authorization": f"Bearer {token}"}
+
+    # Escape single quotes in subject for OData filter
+    safe_subject = subject.replace("'", "''")
+
+    # Try exact filter: subject + sender
+    params = {
+        "$top": 10,
+        "$select": "id,subject,from,receivedDateTime,conversationId,isRead,internetMessageId",
+        "$orderby": "receivedDateTime desc",
+    }
+
+    if sender_email:
+        params["$filter"] = f"subject eq '{safe_subject}' and from/emailAddress/address eq '{sender_email}'"
+    else:
+        params["$filter"] = f"subject eq '{safe_subject}'"
+
+    response = requests.get(
+        f"{GRAPH_ENDPOINT}/me/messages", headers=headers, params=params
+    )
+
+    if response.status_code == 200:
+        messages = response.json().get("value", [])
+        if messages:
+            return pick_best_match(messages, ui_timestamp_str)
+
+    # Fallback: search by subject only (handles special characters)
+    response = requests.get(
+        f"{GRAPH_ENDPOINT}/me/messages",
+        headers=headers,
+        params={
+            "$search": f'"subject:{subject}"',
+            "$top": 10,
+            "$select": "id,subject,from,receivedDateTime,conversationId,isRead,internetMessageId",
+        },
+    )
+    if response.status_code != 200:
+        print(f"API error {response.status_code}: {response.text}", file=sys.stderr)
+        return None
+
+    messages = response.json().get("value", [])
+    # If we have sender_email, filter results client-side
+    if sender_email:
+        messages = [
+            m for m in messages
+            if m.get("from", {}).get("emailAddress", {}).get("address", "").lower() == sender_email.lower()
+        ]
+    return pick_best_match(messages, ui_timestamp_str)
+
+
+def main():
+    info = get_selected_info()
+    if not info or (not info.get("subject") and not info.get("listDesc")):
+        print("No email selected in Outlook.")
+        return
+
+    subject = info.get("subject", "")
+    sender_email = info.get("senderEmail", "")
+    list_desc = info.get("listDesc", "")
+    timestamp = info.get("timestamp", "")
+
+    # If reading pane subject is empty, parse from list description
+    if not subject:
+        match = re.search(r"Subject:\s*(.+?)(?:,\s{4}|\s{4})", list_desc)
+        if match:
+            subject = match.group(1).strip().rstrip(",")
+
+    if not subject:
+        print(f"Could not determine subject.")
+        print(f"  List description: {list_desc[:120]}...")
+        return
+
+    print(f"Subject:  {subject}")
+    print(f"Sender:   {sender_email or '(unknown)'}")
+    print(f"Time:     {timestamp or '(unknown)'}")
+
+    token = get_token()
+    msg = find_message(token, subject, sender_email, timestamp)
+    if not msg:
+        print("\nCould not find this message via the Graph API.")
+        return
+
+    sender = msg.get("from", {}).get("emailAddress", {})
+    print(f"\nFound message:")
+    print(f"  ID:         {msg['id'][:50]}...")
+    print(f"  Subject:    {msg['subject']}")
+    print(f"  From:       {sender.get('name', '')} <{sender.get('address', '')}>")
+    print(f"  Received:   {msg['receivedDateTime']}")
+    print(f"  Read:       {msg['isRead']}")
+    print(f"  Message-ID: {msg.get('internetMessageId', 'N/A')}")
+
+
+if __name__ == "__main__":
+    main()

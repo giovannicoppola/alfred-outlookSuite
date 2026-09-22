@@ -5,9 +5,22 @@
 	<key>bundleid</key>
 	<string>giovanni-outlook</string>
 	<key>category</key>
-	<string>myWorkflows</string>
+	<string>WIP</string>
 	<key>connections</key>
 	<dict>
+		<key>02F9138F-ACB6-4112-908D-AFCF37E8F453</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5EC05D24-928E-42D3-8E66-AD9082C59B7C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1E736616-8136-4D8B-A8BF-B9B493960359</key>
 		<array>
 			<dict>
@@ -34,11 +47,39 @@
 				<false/>
 			</dict>
 		</array>
+		<key>326D99D9-1EC9-48EE-927A-96EC70E18997</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>90002DE4-7086-4791-9770-5C3D3CA4C162</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>361E9B04-F89C-41D7-AF78-B095B79FA5FD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5890C582-59DD-4610-A5A2-73E814F596A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3D67126F-6BD1-4D44-BB64-C48C3AE62C80</key>
+		<array/>
 		<key>42F63D5A-6119-4293-B847-C55068C567A1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FBA71C18-7D6E-4EDF-BA3C-9EC341C2914D</string>
+				<string>5890C582-59DD-4610-A5A2-73E814F596A9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -82,6 +123,58 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8B172BD0-97DE-4090-81E5-62F2BA8EE0F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5890C582-59DD-4610-A5A2-73E814F596A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FBA71C18-7D6E-4EDF-BA3C-9EC341C2914D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5A5B5C5D-1111-4111-8111-111111111111</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5A5B5C5D-2222-4222-8222-222222222222</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5A5B5C5D-4444-4444-8444-444444444444</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5A5B5C5D-5555-4555-8555-555555555555</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5A5B5C5D-5555-4555-8555-555555555555</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5890C582-59DD-4610-A5A2-73E814F596A9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -145,7 +238,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>268E707F-1FCC-4D01-B98C-12B9ED12542D</string>
+				<string>A1A7447C-B4B3-4199-B2A9-326FD20DA122</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -193,7 +286,30 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FBA71C18-7D6E-4EDF-BA3C-9EC341C2914D</string>
+				<string>361E9B04-F89C-41D7-AF78-B095B79FA5FD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>90002DE4-7086-4791-9770-5C3D3CA4C162</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>10719511-A80D-4491-8114-48C997A0AF90</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>02F9138F-ACB6-4112-908D-AFCF37E8F453</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -207,6 +323,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C2A224AF-0638-445D-B53D-FEF8882BC01B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>95178BAA-251C-4696-91A5-8B2A2C6F4E5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA2B620B-81F9-4C32-9478-11B5F2E972BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -233,6 +362,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8B752135-8C02-4D13-925A-417FA07D99F6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C7871273-F072-4566-811C-D840F0B90F42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D67126F-6BD1-4D44-BB64-C48C3AE62C80</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DB9115FB-7605-412A-AB08-EDE0F4DD9C40</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C7871273-F072-4566-811C-D840F0B90F42</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -297,7 +452,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>01F5A176-C99F-4381-BE45-A80B0CB5813E</string>
+				<string>A59A3B8F-9BF1-4E26-8E68-21473CDA1D30</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -320,7 +475,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>6C32DE5F-C7AA-4C22-9A06-67DEDA5B841F</string>
+				<string>95178BAA-251C-4696-91A5-8B2A2C6F4E5E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -406,7 +561,7 @@
 				<key>runningsubtext</key>
 				<string>please wait while I refresh... ⏳</string>
 				<key>script</key>
-				<string>python3 outlook-rebuild.py
+				<string>/usr/bin/python3 outlook-rebuild.py
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -436,7 +591,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 countSnoozedDates.py</string>
+				<string>/usr/bin/python3 countSnoozedDates.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -550,6 +705,134 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if [[ "$1" == http* ]]; then
+  open "$1"
+else
+	open "$1"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A1A7447C-B4B3-4199-B2A9-326FD20DA122</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 get_selected_event.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>90002DE4-7086-4791-9770-5C3D3CA4C162</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>list events</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 get_selected_event.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>list events</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>326D99D9-1EC9-48EE-927A-96EC70E18997</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>10719511-A80D-4491-8114-48C997A0AF90</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -606,7 +889,7 @@
 				<key>runningsubtext</key>
 				<string>Searching...</string>
 				<key>script</key>
-				<string>python3 main.py "$1"</string>
+				<string>/usr/bin/python3 main.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -716,6 +999,54 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>02F9138F-ACB6-4112-908D-AFCF37E8F453</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>7B7A5427-EF95-4400-B26A-3E8F2A7A72DD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -741,43 +1072,44 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>#script completed in Vancouver, Saturday April 27, 2019
-# revised on Tuesday, May 26, 2020, 12:04 PM to update to JSON and switch to date-based mode. 
-# updated on Wednesday, September 1, afternoon: adding the number of snoozed emails to the date. 
+				<string>/usr/bin/python3 captureSnooze.py &gt;/dev/null 2&gt;&amp;1
+# Parse the snooze interval: a number with an optional unit suffix
+#   d = days (default), w = weeks, m = months, y = years.  e.g. 5, 2w, 3m
+q="{query}"
+num=$(echo "$q" | grep -oE '^[0-9]+')
+unit=$(echo "$q" | grep -oiE '[wmdy]$' | tr 'A-Z' 'a-z')
+[ -z "$unit" ] &amp;&amp; unit="d"
 
-
-match=$(date -v +{query}d '+%A %B %d, %Y') 
-snoozeDate=$(date -v +{query}d '+%Y-%m-%d')
-
-myCount=$(python3 countSnoozed.py $snoozeDate 2&gt;&amp;1)    
-
-dayString="days"  
-if [ {query} -eq 1 ]; then
-    dayString="day"  
+if [ -z "$num" ]; then
+cat &lt;&lt; 'EOB'
+{"items": [{"title": "Enter a number to snooze", "subtitle": "e.g. 5 (days), 2w (weeks), 3m (months)", "valid": false, "icon": {"path": "icons/snooze.png"}}]}
+EOB
+exit 0
 fi
 
+adj="+${num}${unit}"
+match=$(date -v ${adj} '+%A %B %d, %Y')
+snoozeDate=$(date -v ${adj} '+%Y-%m-%d')
+myCount=$(/usr/bin/python3 countSnoozed.py $snoozeDate 2&gt;&amp;1)
+
+case "$unit" in
+    w) unitWord="week";;
+    m) unitWord="month";;
+    y) unitWord="year";;
+    *) unitWord="day";;
+esac
+if [ "$num" -ne 1 ]; then unitWord="${unitWord}s"; fi
 
 cat &lt;&lt; EOB
-
-	{"items": [
-
-
+{"items": [
     {
         "title": "Snooze until $match ($myCount)",
-        "subtitle": "Snooze {query} $dayString and Archive",
+        "subtitle": "Snooze $num $unitWord and Archive",
         "arg": "$snoozeDate",
-        "icon": {
-			"path": "icons/snooze.png"
-			}	    
-	},
-
-
-
-	]}
+        "icon": { "path": "icons/snooze.png" }
+    }
+]}
 EOB
-
-
-
 </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -807,8 +1139,12 @@ EOB
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>on run argv	set myDraft to item 1 of argv
-	tell application "Microsoft Outlook"		set new_message to make new outgoing message with properties {subject: myDraft}	end tellend run</string>
+				<string>on run argv
+	set myDraft to item 1 of argv
+	tell application "Microsoft Outlook"
+		set new_message to make new outgoing message with properties {subject: myDraft}
+	end tell
+end run</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -866,7 +1202,7 @@ EOB
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 snoozer.py "$1"</string>
+				<string>/usr/bin/python3 snoozer.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -932,9 +1268,9 @@ EOB
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
-						<integer>5</integer>
+						<integer>0</integer>
 						<key>matchstring</key>
-						<string></string>
+						<string>1</string>
 						<key>outputlabel</key>
 						<string>recur</string>
 						<key>uid</key>
@@ -971,6 +1307,29 @@ EOB
 			<string>BBEC3858-11B2-4059-8AF6-300BDD9EF5DF</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 draftEmail.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A59A3B8F-9BF1-4E26-8E68-21473CDA1D30</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1056,7 +1415,7 @@ EOB
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 unsnoozer.py</string>
+				<string>/usr/bin/python3 unSnoozer.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1080,6 +1439,19 @@ EOB
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>361E9B04-F89C-41D7-AF78-B095B79FA5FD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -1095,6 +1467,27 @@ EOB
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>E81C01F2-F92E-4611-93EE-16F5F93C612C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>Meeting info copied to clipboard 📋️</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>5EC05D24-928E-42D3-8E66-AD9082C59B7C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1294,7 +1687,7 @@ end run</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>/Users/giovanni.coppola/OneDrive - Regeneron Pharmaceuticals, Inc/MyScripts/FocusFolder.scpt</string>
+				<string></string>
 				<key>type</key>
 				<integer>6</integer>
 			</dict>
@@ -1368,7 +1761,7 @@ function run(argv) {
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 removeThree.py "$1"</string>
+				<string>/usr/bin/python3 removeThree.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1407,12 +1800,35 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 saveEmail.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>95178BAA-251C-4696-91A5-8B2A2C6F4E5E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
 				<string>ols</string>
 				<key>subtext</key>
-				<string>Choose folder</string>
+				<string>Choose folder (save only — use olsa to also archive)</string>
 				<key>text</key>
 				<string>Save Outlook Email</string>
 				<key>withspace</key>
@@ -1422,6 +1838,215 @@ function run(argv) {
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>42F63D5A-6119-4293-B847-C55068C567A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 captureSelected.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5890C582-59DD-4610-A5A2-73E814F596A9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>olsa</string>
+				<key>subtext</key>
+				<string>Choose folder (message will be archived)</string>
+				<key>text</key>
+				<string>Save &amp; Archive Outlook Email</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5A5B5C5D-4444-4444-8444-444444444444</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>SAVE_ARCHIVE</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5A5B5C5D-5555-4555-8555-555555555555</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>rsvp</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 rsvp.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Respond to the selected Outlook meeting invitation (New Outlook + Hammerspoon)</string>
+				<key>title</key>
+				<string>RSVP to invitation</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5A5B5C5D-1111-4111-8111-111111111111</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 rsvp.py --run "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5A5B5C5D-2222-4222-8222-222222222222</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 setupHammerspoon.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C7871273-F072-4566-811C-D840F0B90F42</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string>Monaco</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>3D67126F-6BD1-4D44-BB64-C48C3AE62C80</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>olhs</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Set up / check Hammerspoon integration</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>DB9115FB-7605-412A-AB08-EDE0F4DD9C40</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1479,6 +2104,20 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>ypos</key>
 			<real>460</real>
 		</dict>
+		<key>02F9138F-ACB6-4112-908D-AFCF37E8F453</key>
+		<dict>
+			<key>xpos</key>
+			<real>2355</real>
+			<key>ypos</key>
+			<real>385</real>
+		</dict>
+		<key>10719511-A80D-4491-8114-48C997A0AF90</key>
+		<dict>
+			<key>xpos</key>
+			<real>2355</real>
+			<key>ypos</key>
+			<real>245</real>
+		</dict>
 		<key>1E736616-8136-4D8B-A8BF-B9B493960359</key>
 		<dict>
 			<key>xpos</key>
@@ -1500,11 +2139,11 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>note</key>
-			<string>Open in Outlook</string>
+			<string>Open in Outlook (replaced with the run script object on the right)</string>
 			<key>xpos</key>
-			<real>440</real>
+			<real>465</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>195</real>
 		</dict>
 		<key>2FFBF97B-DE4E-4772-A4AA-13FF90C8FA3F</key>
 		<dict>
@@ -1515,6 +2154,20 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>ypos</key>
 			<real>795</real>
 		</dict>
+		<key>326D99D9-1EC9-48EE-927A-96EC70E18997</key>
+		<dict>
+			<key>xpos</key>
+			<real>1825</real>
+			<key>ypos</key>
+			<real>215</real>
+		</dict>
+		<key>361E9B04-F89C-41D7-AF78-B095B79FA5FD</key>
+		<dict>
+			<key>xpos</key>
+			<real>100</real>
+			<key>ypos</key>
+			<real>630</real>
+		</dict>
 		<key>364681AF-CD8C-4557-A3D1-A1797684D961</key>
 		<dict>
 			<key>colorindex</key>
@@ -1523,6 +2176,13 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<real>1325</real>
 			<key>ypos</key>
 			<real>40</real>
+		</dict>
+		<key>3D67126F-6BD1-4D44-BB64-C48C3AE62C80</key>
+		<dict>
+			<key>xpos</key>
+			<real>1360</real>
+			<key>ypos</key>
+			<real>1400</real>
 		</dict>
 		<key>42F63D5A-6119-4293-B847-C55068C567A1</key>
 		<dict>
@@ -1538,6 +2198,13 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>ypos</key>
 			<real>265</real>
 		</dict>
+		<key>5890C582-59DD-4610-A5A2-73E814F596A9</key>
+		<dict>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>895</real>
+		</dict>
 		<key>59CEE536-6DC2-433C-967F-2DAA2119D3D1</key>
 		<dict>
 			<key>note</key>
@@ -1546,6 +2213,41 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<real>440</real>
 			<key>ypos</key>
 			<real>40</real>
+		</dict>
+		<key>5A5B5C5D-1111-4111-8111-111111111111</key>
+		<dict>
+			<key>xpos</key>
+			<real>120</real>
+			<key>ypos</key>
+			<real>1180</real>
+		</dict>
+		<key>5A5B5C5D-2222-4222-8222-222222222222</key>
+		<dict>
+			<key>xpos</key>
+			<real>440</real>
+			<key>ypos</key>
+			<real>1180</real>
+		</dict>
+		<key>5A5B5C5D-4444-4444-8444-444444444444</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>1020</real>
+		</dict>
+		<key>5A5B5C5D-5555-4555-8555-555555555555</key>
+		<dict>
+			<key>xpos</key>
+			<real>220</real>
+			<key>ypos</key>
+			<real>1035</real>
+		</dict>
+		<key>5EC05D24-928E-42D3-8E66-AD9082C59B7C</key>
+		<dict>
+			<key>xpos</key>
+			<real>2335</real>
+			<key>ypos</key>
+			<real>640</real>
 		</dict>
 		<key>6C32DE5F-C7AA-4C22-9A06-67DEDA5B841F</key>
 		<dict>
@@ -1569,6 +2271,13 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<real>1575</real>
 			<key>ypos</key>
 			<real>460</real>
+		</dict>
+		<key>7B7A5427-EF95-4400-B26A-3E8F2A7A72DD</key>
+		<dict>
+			<key>xpos</key>
+			<real>1915</real>
+			<key>ypos</key>
+			<real>440</real>
 		</dict>
 		<key>80166171-CC12-4381-AB77-430104E8C23D</key>
 		<dict>
@@ -1609,6 +2318,13 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>ypos</key>
 			<real>765</real>
 		</dict>
+		<key>90002DE4-7086-4791-9770-5C3D3CA4C162</key>
+		<dict>
+			<key>xpos</key>
+			<real>2070</real>
+			<key>ypos</key>
+			<real>215</real>
+		</dict>
 		<key>92B01EF1-A39E-4237-8C4B-21A76873092B</key>
 		<dict>
 			<key>xpos</key>
@@ -1623,12 +2339,33 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>ypos</key>
 			<real>765</real>
 		</dict>
+		<key>95178BAA-251C-4696-91A5-8B2A2C6F4E5E</key>
+		<dict>
+			<key>xpos</key>
+			<real>440</real>
+			<key>ypos</key>
+			<real>885</real>
+		</dict>
 		<key>9D74AA26-60A9-44F2-BCE8-593F2F8D6662</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
 			<real>265</real>
+		</dict>
+		<key>A1A7447C-B4B3-4199-B2A9-326FD20DA122</key>
+		<dict>
+			<key>xpos</key>
+			<real>615</real>
+			<key>ypos</key>
+			<real>195</real>
+		</dict>
+		<key>A59A3B8F-9BF1-4E26-8E68-21473CDA1D30</key>
+		<dict>
+			<key>xpos</key>
+			<real>945</real>
+			<key>ypos</key>
+			<real>580</real>
 		</dict>
 		<key>A7249790-0513-4EB7-864D-4686E33CAFCF</key>
 		<dict>
@@ -1659,6 +2396,13 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>ypos</key>
 			<real>95</real>
 		</dict>
+		<key>C7871273-F072-4566-811C-D840F0B90F42</key>
+		<dict>
+			<key>xpos</key>
+			<real>1135</real>
+			<key>ypos</key>
+			<real>1400</real>
+		</dict>
 		<key>CCB1D974-937A-4453-AEFD-2C75B45EDE90</key>
 		<dict>
 			<key>colorindex</key>
@@ -1667,6 +2411,17 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<real>440</real>
 			<key>ypos</key>
 			<real>465</real>
+		</dict>
+		<key>DB9115FB-7605-412A-AB08-EDE0F4DD9C40</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Hammerspoon setup / doctor</string>
+			<key>xpos</key>
+			<real>920</real>
+			<key>ypos</key>
+			<real>1400</real>
 		</dict>
 		<key>DBF8FBC6-D827-4B5E-BF01-2CFC47E33B62</key>
 		<dict>
@@ -1912,6 +2667,27 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>placeholder</key>
+				<string>Obsidian / notes vault folder</string>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Optional. If you keep meeting notes as Markdown daily notes with headers like "# Meeting with [[Person Name]]", point this at the vault folder. When set, the meeting note built from an event includes a link to your most recent previous meeting with the first other attendee. Leave empty to disable.</string>
+			<key>label</key>
+			<string>Meeting Notes Vault</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>MEETING_NOTES_VAULT</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<false/>
 				<key>required</key>
 				<false/>
@@ -2045,7 +2821,7 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.9.5</string>
+	<string>0.10.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/giovannicoppola/alfred-outlook</string>
 </dict>
