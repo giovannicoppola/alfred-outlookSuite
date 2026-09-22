@@ -1,13 +1,13 @@
-# alfred-outlook
+# alfred-outlookSuite
 ***A suite of tools to interact with Microsoft Outlook via Alfred***
 
 
 
 - *Note*: Many of the functions of this package will not work with the new, electron-based, 'New Outlook' interface, as AppleScript is not supported. Uncheck `New Outlook` in the `File` menu in Outlook to switch to the legacy version.
 
-<a href="https://github.com/giovannicoppola/alfred-outlook/releases/latest/">
+<a href="https://github.com/giovannicoppola/alfred-outlookSuite/releases/latest/">
 <img alt="Downloads"
-src="https://img.shields.io/github/downloads/giovannicoppola/alfred-outlook/total?color=purple&label=Downloads"><br/>
+src="https://img.shields.io/github/downloads/giovannicoppola/alfred-outlookSuite/total?color=purple&label=Downloads"><br/>
 </a>
 
 ![](images/alfred-outlookSuite.png)
@@ -150,16 +150,16 @@ Once you have the two credentials, follow [SETUP.md](SETUP.md) to finish configu
 - Alfred 5 with Powerpack license
 - **Hammerspoon required for selected-email actions (New Outlook only).** The actions that operate on the *currently selected* email — **Email Saving (`ols`)** and **Email Snoozing (`olz`)** — must read which message is selected. New Outlook renders its message list inside a web-content accessibility subtree that a plain script can't reach, so the workflow delegates the read to **[Hammerspoon](https://www.hammerspoon.org/)** (the same optional dependency used for RSVP), which can read it via the native accessibility API. Install Hammerspoon, grant **it** Accessibility permission, and load the bundled `outlook_rsvp.lua` module (see the [RSVP setup](#rsvp) — same module provides `getSelection`). With that in place, **Alfred itself does not need Accessibility permission**. Without Hammerspoon, `ols`/`olz` on New Outlook fail with *"No cached email info found"*. Search, drafting, filters, and other Graph-only actions need none of this.
 - *Note*: Many of the functions of this package will not work with the 'New Outlook' interface, as AppleScript is not supported. 
-- *Note*: Your institution might have an automatic archival policy. In that case older mail messages that have been archived will not be returned in alfred-outlook queries
+- *Note*: Your institution might have an automatic archival policy. In that case older mail messages that have been archived will not be returned in alfred-outlookSuite queries
 - Python3 (howto [here](https://www.freecodecamp.org/news/python-version-on-mac-update/))
-- Download `alfred-outlook` [latest release](https://github.com/giovannicoppola/alfred-outlook/releases/latest)
+- Download `alfred-outlookSuite` [latest release](https://github.com/giovannicoppola/alfred-outlookSuite/releases/latest)
 
 
 
 ## Default settings 
-- In Alfred, open the 'Configure Workflow' menu in `alfred-outlook` preferences
+- In Alfred, open the 'Configure Workflow' menu in `alfred-outlookSuite` preferences
 - *Optional*:	
-	- set the keyword (or hotkey) to launch `alfred-outlook` (default: `olk`) 
+	- set the keyword (or hotkey) to launch `alfred-outlookSuite` (default: `olk`) 
 	- set the keyword (or hotkey) to force-refresh the folder list (default: `outlook::refresh`)
 	- set the keyword (or hotkey) to force-the unsnoozing script (default: `olu`)
 	- set your name, so that it can be used in `from:me`, `to:me`, and `cc:me` searches
@@ -216,13 +216,13 @@ Once you have the two credentials, follow [SETUP.md](SETUP.md) to finish configu
 - enter the number of days you want to snooze your email. Alfred will show the corresponding date, and the number of emails already snoozed for that date. 
 - Selecting the result will 1) Snooze the email until the desired date and 2) move that email to the `Snoozed` folder. 
 - the `checkSnoozed` keyword will show in large font (and copy to clipboard) an overview of all the snoozed email (one line per day) 
-- Unsnoozing will happen once a day, as soon as `alfred-outlook` is launched. You can force the unsnooze script using a keyword (default: `olu`) or a hotkey. 
+- Unsnoozing will happen once a day, as soon as `alfred-outlookSuite` is launched. You can force the unsnooze script using a keyword (default: `olu`) or a hotkey. 
 
 ![](images/snooze.png)
 
 
 ## Folder database refresh 🔄
-- will occur according to the rate in days set in `alfred-outlook` preferences
+- will occur according to the rate in days set in `alfred-outlookSuite` preferences
 - `outlook::refresh` to force folder database refresh
 
 

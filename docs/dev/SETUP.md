@@ -52,8 +52,8 @@ There is no client secret — this is a public client app that authenticates wit
 ## Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/giovannicoppola/alfred-outlook.git
-cd alfred-outlook/src
+git clone https://github.com/giovannicoppola/alfred-outlookSuite.git
+cd alfred-outlookSuite/src
 ```
 
 Or if you already have the repo, navigate to the `src` directory.
@@ -130,7 +130,7 @@ Without this, the scripts that detect the selected email/event will fail silentl
 In each Alfred workflow "Run Script" action, use the following pattern:
 
 ```bash
-OUTLOOK_SHORTCUTS_DIR="$HOME/path/to/alfred-outlook/src"
+OUTLOOK_SHORTCUTS_DIR="$HOME/path/to/alfred-outlookSuite/src"
 "$OUTLOOK_SHORTCUTS_DIR/venv/bin/python3" "$OUTLOOK_SHORTCUTS_DIR/SCRIPT_NAME.py"
 ```
 
@@ -146,7 +146,7 @@ If you want to make the workflow configurable for other users, expose these as A
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `OUTLOOK_SHORTCUTS_DIR` | `$HOME/path/to/alfred-outlook/src` | Path to the scripts directory |
+| `OUTLOOK_SHORTCUTS_DIR` | `$HOME/path/to/alfred-outlookSuite/src` | Path to the scripts directory |
 | `MINUTES_AHEAD` | `5` or `10` | How far ahead to look for upcoming meetings |
 | `SAVE_DIR` | `~/Documents/SavedEmails` | Where .eml files are saved |
 

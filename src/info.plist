@@ -2823,6 +2823,6 @@ A suite of tools to interact with Microsoft Outlook via Alfred
 	<key>version</key>
 	<string>0.10.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/giovannicoppola/alfred-outlook</string>
+	<string>https://github.com/giovannicoppola/alfred-outlookSuite</string>
 </dict>
 </plist>
